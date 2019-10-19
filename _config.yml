@@ -22,7 +22,7 @@ title: Siddhant's Scratch Book
 email: siddhant2697@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A series of blog posts gathering notes on interesting concepts read by me. These blog posts aim to provide readers with a solid idea on the topic they  are reading.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "/Blog_Sid" # the subpath of your site, e.g. /blog
 url: "https://sid2697.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  sid2697
