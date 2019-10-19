@@ -9,7 +9,7 @@ comments: true
 
 Connectionist Temporal Classification (CTC) is a type of Neural Network output helpful in tackling sequence problems like handwriting and speech recognition where the timing varies. Using CTC ensures that one does not need an aligned dataset, which makes the training process more straightforward.
 
-# What CTC does?
+## What CTC does?
 
 In the case of creating an OCR (Optical Character Reader), CRNN (Convolutional Recurrent Neural Networks) are a preferred choice. They output a character-score for each time-step, which is represented by a matrix. We now need to use this matrix for:
 - Training the Neural Network, i.e., calculating the loss
@@ -17,7 +17,7 @@ In the case of creating an OCR (Optical Character Reader), CRNN (Convolutional R
 
 CTC operation helps in achieving both tasks.
 
-# Problems solved by CTC
+## Problems solved by CTC
 
 Imagine creating a dataset full of images of text and specifying each time-step of the image's corresponding character, as shown in **fig1 [TODO]**. There are a couple of issues with this  approach:
 - Annotating a dataset at the character level is a tedious task
@@ -27,6 +27,39 @@ Here CTC comes to the rescue!
 - CTC is formulated in such a way, that it only requires the text that occurs in the image. We can ignore both the width and position of the characters in an image.
 - There is no need for post-processing the output of the CTC operation! Using decoding techniques, we can directly get the result of the network.
 
-# CTC Working
+## CTC Working
 
+CTC works on the following three major concepts:
+- Encoding the text
+- Loss calculation
+- Decoding
 
+# Encoding the text
+
+The issue with methods not using CTC is, what to do when the character takes more than one time-step in the image? Non-CTC methods would fail here and give duplicate characters. 
+
+To solve this issue, what CTC loss does is, it merges all the repeating characters into a single character. For example, if the word in the image is 'hey' where 'h' takes three time-steps, 'e' and 'y' take one time-step each. Then the output from the network using CTC will be 'hhhey', which as per our encoding scheme, gets collapsed to 'hey'. 
+
+Now the question arises, what about the words where there are repeating characters? For handling those cases, CTC introduces a pseudo-character called blank denoted as "-" in the following examples.  While encoding the text, if a character repeats, then a blank is placed between the characters in the output text. Let's consider the word 'meet', possible encodings for it will be, 'mm-ee-ee-t', 'mmm-e-e-ttt', wrong encoding will be 'mm-eee-tt', as it'll result in 'met' when decoded. The CRNN is trained to output the encoded text.
+
+# Loss calculation
+
+To train the CRNN, we need to calculate loss given the image and its label. We are getting a matrix of the score for each character at every time-step from the CRNN. **Fig3[TODO]** shows an example of an output matrix from the CRNN. There are three time-steps and four characters (including one blank). At each time-step, the character score sums up to 1. 
+
+For calculating the loss, all the possible alignment's scores of the ground truth are summed up. In this manner, it is not significant where the character occurs in the image.
+
+**Add paragraph as per the example image created showing score calculation**
+
+# Decoding
+
+Once CRNN gets trained, we want it to give us output on unseen text images. Putting it differently, we want the most likely text given an output matrix of the CRNN. One method can be to examine every potential text output, but it won't be much practical to do from a computation point of view. The **best path** algorithm is used to overcome this issue. 
+
+It consists of the following two steps:
+- Calculates the best path by considering the character with max probability at every time-step.
+- This step involves removing blanks and duplicate characters, which results in the actual text.
+
+**Fig4[TODO]** demonstrates and explains the process mentioned above.
+
+## Conclusion
+
+TODO
