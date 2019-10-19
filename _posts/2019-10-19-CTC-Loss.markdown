@@ -1,0 +1,15 @@
+---
+layout: post
+title: Explanation of Connectionist Temporal Classification
+date: 2019-10-19 12:00:00 +0530
+categories: Algorithm
+google_analytics: UA-145393252-1
+comments: true
+---
+
+### Introduction
+
+# Example
+
+# Advantages
+
