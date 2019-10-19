@@ -7,9 +7,26 @@ google_analytics: UA-145393252-1
 comments: true
 ---
 
-### Introduction
+Connectionist Temporal Classification (CTC) is a type of Neural Network output helpful in tackling sequence problems like handwriting and speech recognition where the timing varies. Using CTC ensures that one does not need an aligned dataset, which makes the training process more straightforward.
 
-# Example
+# What CTC does?
 
-# Advantages
+In the case of creating an OCR (Optical Character Reader), CRNN (Convolutional Recurrent Neural Networks) are a preferred choice. They output a character-score for each time-step, which is represented by a matrix. We now need to use this matrix for:
+- Training the Neural Network, i.e., calculating the loss
+- Decoding the output of the Neural Network
+
+CTC operation helps in achieving both tasks.
+
+# Problems solved by CTC
+
+Imagine creating a dataset full of images of text and specifying each time-step of the image's corresponding character, as shown in **fig1 [TODO]**. There are a couple of issues with this  approach:
+- Annotating a dataset at the character level is a tedious task
+- What if the character takes up more than one time-step, as shown in **fig2 [TODO]**? It will result in duplication of the characters.
+
+Here CTC comes to the rescue!
+- CTC is formulated in such a way, that it only requires the text that occurs in the image. We can ignore both the width and position of the characters in an image.
+- There is no need for post-processing the output of the CTC operation! Using decoding techniques, we can directly get the result of the network.
+
+# CTC Working
+
 
