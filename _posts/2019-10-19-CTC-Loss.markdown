@@ -9,6 +9,8 @@ comments: true
 
 Connectionist Temporal Classification (CTC) is a type of Neural Network output helpful in tackling sequence problems like handwriting and speech recognition where the timing varies. Using CTC ensures that one does not need an aligned dataset, which makes the training process more straightforward.
 
+![CRNN Flow] (files/CTC_!.png "Fig.1 Flow of Handwriting Recognition using CNN and RNN")
+
 ## What CTC does?
 
 In the case of creating an OCR (Optical Character Reader), CRNN (Convolutional Recurrent Neural Networks) are a preferred choice. They output a character-score for each time-step, which is represented by a matrix. We now need to use this matrix for:
