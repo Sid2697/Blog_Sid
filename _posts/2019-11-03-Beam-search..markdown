@@ -55,7 +55,7 @@ But there are cases where this decoding technique fails.
 Let us consider an example, if the ground truth is “a”, then all the possible paths for “a” are “aa”, “a-”, “-a“, as shown in Fig.3. But there are cases where this decoding technique fails. Summing up the score of the individual path we get, 0.09 + 0.15 + 0.18 = 0.42. As, 0.42 > 0.3 shows that "a" is more probable than "". Hence, we need a better and efficient algorithm for taking care of such cases.
 
 {: style="text-align:center"}
-![Possible paths](https://github.com/Sid2697/Blog_Sid/blob/gh-pages/assets/images/Blog_2_fig_1.png)
+![Possible paths](https://github.com/Sid2697/Blog_Sid/blob/gh-pages/assets/images/Blog_2_fig_3.png)
 
 {: style="text-align:center"}
 *Fig.3 A case where Best Path Decoding fails. Here the dashed lines in red shows the possible path for getting the letter "a".*
