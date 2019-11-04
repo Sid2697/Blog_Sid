@@ -27,7 +27,7 @@ CTC works by encoding the text in a way that merges all the repeating chracters 
 For a more detailed discussion readers are advised to go through "[Explanation of Connectionist Temporal Classification](https://sid2697.github.io/Blog_Sid/algorithm/2019/10/19/CTC-Loss.html)".
 
 {: style="text-align:center"}
-![Output matrix](https://github.com/Sid2697/Blog_Sid/blob/gh-pages/assets/images/Blog_2_fig_1.png)
+![Output matrix](../../../../assets/images/Blog_2_fig_1.png)
 
 {: style="text-align:center"}
 *Fig.1 Output matrix from the Convolutional Recurrent Neural Network.*
@@ -43,7 +43,7 @@ It works in the following manner:
 Let's try to understand this by looking into an example. Fig.2 shows an output probability matrix from a CRNN. The character with the most probability for "t0" and "t1" are '-',  and '-' respectively. Then decoding the text, we get the output as "". We can calculate the probability for this path by multiplying the character probability as, 0.6x0.5 = 0.3 for this example.
 
 {: style="text-align:center"}
-![Best Path decoding example](https://github.com/Sid2697/Blog_Sid/blob/gh-pages/assets/images/Blog_2_fig_2.png)
+![Best Path decoding example](../../../../assets/images/Blog_2_fig_2.png)
 
 {: style="text-align:center"}
 *Fig.2 Best Path Decoding example, the dashed line in red shows the path with maximum character probability.*
@@ -55,7 +55,7 @@ But there are cases where this decoding technique fails.
 Let us consider an example, if the ground truth is “a”, then all the possible paths for “a” are “aa”, “a-”, “-a“, as shown in Fig.3. But there are cases where this decoding technique fails. Summing up the score of the individual path we get, 0.09 + 0.15 + 0.18 = 0.42. As, 0.42 > 0.3 shows that "a" is more probable than "". Hence, we need a better and efficient algorithm for taking care of such cases.
 
 {: style="text-align:center"}
-![Possible paths](https://github.com/Sid2697/Blog_Sid/blob/gh-pages/assets/images/Blog_2_fig_3.png)
+![Possible paths](../../../../assets/images/Blog_2_fig_3.png)
 
 {: style="text-align:center"}
 *Fig.3 A case where Best Path Decoding fails. Here the dashed line in red shows the possible path for getting the letter "a".*

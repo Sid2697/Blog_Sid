@@ -89,8 +89,6 @@ For example, let us consider the matrix in Fig.3. If we consider the first time-
 
 Initially, we looked at the problems faced with a naive Neural Network for the handwriting recognition task. Then, we looked into how CTC can solve those issues. Then, we saw how CTC functions by encoding the text, method of calculating the loss, and decoding the output from a Neural Network trained using CTC. 
 
-![Beam search visualised](../../../../assets/images/Blog_2_fig_4.png)
-
 This article covers the most basic version of the decoding process. There are other methods using which we can decode the output from the CTC-trained network. We will look into those methods in future article.
 
 ## References
