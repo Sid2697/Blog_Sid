@@ -68,7 +68,7 @@ For calculating the loss, all the possible alignments' scores of the ground trut
 
 {: style="text-align:center"}
 ![Output matrix](../../../../assets/images/CTC_3.png)
-
+{: style="text-align:center"}
 *Fig.3 Output matrix from the Neural Network. It shows the character probability at each time-step.*
 
 Corresponding character scores are multiplied together to get the score for one path. In Fig.3 the score for the path "a--" is 0.4x0.7x0.6 = 0.168, and for the path "aaa" is 0.4x0.3x0.4 = 0.048. For getting the score corresponding to given ground truth, scores of all the paths to the corresponding text are summed up. 
@@ -89,7 +89,7 @@ For example, let us consider the matrix in Fig.3. If we consider the first time-
 
 Initially, we looked at the problems faced with a naive Neural Network for the handwriting recognition task. Then, we looked into how CTC can solve those issues. Then, we saw how CTC functions by encoding the text, method of calculating the loss, and decoding the output from a Neural Network trained using CTC. 
 
-This article covers the most basic version of the decoding process. There are other methods using which we can decode the output from the CTC-trained network. We will look into those methods in future articles.
+This article covers the most basic version of the decoding process. There are other methods using which we can decode the output from the CTC-trained network. We will look into those methods in future article.
 
 ## References
 - [CTC Paper](https://www.cs.toronto.edu/~graves/icml_2006.pdf)
