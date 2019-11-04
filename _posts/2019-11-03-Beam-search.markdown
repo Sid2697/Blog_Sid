@@ -72,7 +72,6 @@ This time the extended beams give us beam with a probability of 0.09, 0.06, 0.15
 
 {: style="text-align:center"}
 ![Beam search visualised](../../../../assets/images/Blog_2_fig_4.png)
-<!-- ![Annotation Issue](../../../../assets/images/CTC_2.png) -->
 
 {: style="text-align:center"}
 *Fig.4 Beam Search Decoding visualised as a tree with "a", "b" and beam-width as 2. Solid lines show new beams and dashed lines shows merging of similar characters*
