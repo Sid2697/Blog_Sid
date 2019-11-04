@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Decoding Connectionist Temporal Classification
-date: 2019-11-04 12:00:00 +0530
+date: 2019-11-04 15:00:00 +0530
 categories: Algorithm
 google_analytics: UA-145393252-1
 comments: true
@@ -18,7 +18,7 @@ In the following sections, we will first take a brief look at what Connectionist
 
 ## Revisiting CTC
 
-Here is a short refresher on what is Connectionist Temporal Classification (CTC).
+Here is a short refresher on what Connectionist Temporal Classification (CTC) is.
 
 CTC is a method using which we can train a Neural Network with the pair of images and ground truth texts without worrying about the width and position of the letter in the input image.
 
@@ -74,7 +74,7 @@ This time the extended beams give us beam with a probability of 0.09, 0.06, 0.15
 ![Beam search visualised](../../../../assets/images/Blog_2_fig_4.png)
 
 {: style="text-align:center"}
-*Fig.4 Beam Search Decoding visualised as a tree with "a", "b" and beam-width as 2. Solid lines show new beams and dashed lines shows merging of similar characters*
+*Fig.4 Beam Search Decoding visualised as a tree with "a", "b" and beam-width as 2. Number in the bracket is the probability for that character, solid lines show new beams and dotted lines shows merging of similar characters*
 
 Here is an implementation for this algorithm:
 
