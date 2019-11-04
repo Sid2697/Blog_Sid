@@ -14,15 +14,15 @@ They are:
 - Beam Search Decoding
 
 
-In the following sections, we will first take a brief look at what is Connectionist Temporal Classification (CTC) and then explore both the decoding methods.
+In the following sections, we will first take a brief look at what Connectionist Temporal Classification (CTC) really is, and then explore both the decoding methods.
 
 ## Revisiting CTC
 
 Here is a short refresher on what is Connectionist Temporal Classification (CTC).
 
-CTC is a method using which we can train a Neural Network with the pair of images and ground truth texts without bothering about the width and position of the letter in the input image.
+CTC is a method using which we can train a Neural Network with the pair of images and ground truth texts without worrying about the width and position of the letter in the input image.
 
-CTC works by encoding the text in a way that, all the repeating characters get merged into a single character. For the repeating letters, CTC uses a pseudo-character denoted as "-" in our examples. Fig.1 shows the output probability matrix from a CRNN. There are two time-steps and three characters (including one blank). At each time-step, the character score sums up to 1. Scores for all the possible alignments are added together for the corresponding ground truth for calculating the loss.
+CTC works by encoding the text in a way that merges all the repeating chracters into a single character. For the repeating letters, CTC uses a pseudo-character denoted as "-", in our examples. Fig.1 shows the output probability matrix from a CRNN. There are two time-steps and three characters (including one blank). At each time-step, the character score sums up to 1. Scores for all the possible alignments are added together for the corresponding ground truth for calculating the loss.
  
 For a more detailed discussion readers are advised to go through "[Explanation of Connectionist Temporal Classification](https://sid2697.github.io/Blog_Sid/algorithm/2019/10/19/CTC-Loss.html)".
 
@@ -37,7 +37,7 @@ For a more detailed discussion readers are advised to go through "[Explanation o
 Best path decoding is the easiest method for decoding the output probability matrix.
 
 It works in the following manner:
-- Calculating the best path by considering the character with max probability at every time-step.
+- The first step entails calculating the best path by considering the character with the maximum probability at every time-step.
 - The second step involves removing blanks and duplicate characters.
 
 Let's try to understand this by looking into an example. Fig.2 shows an output probability matrix from a CRNN. The character with the most probability for "t0" and "t1" are '-',  and '-' respectively. Then decoding the text, we get the output as "". We can calculate the probability for this path by multiplying the character probability as, 0.6x0.5 = 0.3 for this example.
@@ -58,7 +58,7 @@ Let us consider an example, if the ground truth is “a”, then all the possibl
 ![Possible paths](https://github.com/Sid2697/Blog_Sid/blob/gh-pages/assets/images/Blog_2_fig_3.png)
 
 {: style="text-align:center"}
-*Fig.3 A case where Best Path Decoding fails. Here the dashed lines in red shows the possible path for getting the letter "a".*
+*Fig.3 A case where Best Path Decoding fails. Here the dashed line in red shows the possible path for getting the letter "a".*
 
 ## Beam Search Decoding
 
@@ -68,10 +68,11 @@ Let us consider our output probability matrix as an example of getting an intuit
 
 In Fig.4, you can see the tree for the output matrix shown in Fig.3. Here, we start with an empty beam " ", which will act as the root node of the tree. We can take this beam and extend it to all the possible characters under consideration. We get one path for each beam with a probability of 0.3, 0.1, 0.6 for "a", "b", "-" respectively. As we have beam-width equal to 2, we will not be considering "b" for the further expansion process. The process is again repeated for both the remaining beams.
 
-This time the extended beams give us beam with a probability of 0.09, 0.06, 0.15, 0.18, 0.18, 0.3 for "aa", "ab", "a-", "-a", "-b", "--" respectively. As these nodes will be our leaf nodes, we'll merge the nodes with similar output. For example, we'll merge "aa", "a-", and "-a" as they all are equal to "a". After doing this we are left with 3 beams with probability of 0.42, 0.18, 0.3 for "a", "-b", "--" respectively. We get rid of "-b" as we have a beam-size of 2 and it has the lowest probability. Now we can see that, by using the beam search decoding algorithm we were able to reach the correct solution, which is "a". 
+This time the extended beams give us beam with a probability of 0.09, 0.06, 0.15, 0.18, 0.18, 0.3 for "aa", "ab", "a-", "-a", "-b", "--" respectively. As these nodes will be our leaf nodes, we'll merge the nodes with similar output. For example, we'll merge "aa", "a-", and "-a" as they all are equal to "a". After doing this we are left with 3 beams with probability of 0.42, 0.18, 0.3 for "a", "-b", "--" respectively. We get rid of "-b" as we have a beam-size of 2 and it has the lowest probability. Now, it is clear that, by using the beam search decoding algorithm we were able to reach the correct solution, which is “a”.
 
 {: style="text-align:center"}
-![Beam search visualised](https://github.com/Sid2697/Blog_Sid/blob/gh-pages/assets/images/Blog_2_fig_4.png)
+![Beam search visualised](../../../../assets/images/Blog_2_fig_4.png)
+<!-- ![Annotation Issue](../../../../assets/images/CTC_2.png) -->
 
 {: style="text-align:center"}
 *Fig.4 Beam Search Decoding visualised as a tree with "a", "b" and beam-width as 2. Solid lines show new beams and dashed lines shows merging of similar characters*
@@ -105,7 +106,7 @@ def beam_search_decoder(probability_matrix, beam_width):
 
 In this code, we begin with a list of empty sequences which will contain candidate beams with the corresponding score. Then we loop through the probability matrix. In this loop, we get the previous best sequence and then expand them by looping through all the classes (characters). In this manner, we get a list of possible sequences with scores which is further sorted and we get beams equal to the beam-width.
 
-Advantage of using this decoding method is that it explores a larger number of solutions. But it is slow when compared to the best path decoding algorithm. If we have *c* characters, *t* time-steps and *k* beam_width, the algorithm has a run time of O(*c.t.k*).
+Advantage of using this decoding method is that it explores a larger number of solutions. But, it is slow when compared to the best path decoding algorithm. If we have *c* characters, *t* time-steps and *k* beam_width, the algorithm has a run time of O(*c.t.k*).
 
 ## Conclusion
 
