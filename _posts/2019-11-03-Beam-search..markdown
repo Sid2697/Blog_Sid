@@ -110,3 +110,10 @@ Advantage of using this decoding method is that it explores a larger number of s
 ## Conclusion
 
 In this article, we saw two different methods of decoding the output probability matrix from a Convolutional Recurrent Neural Network trained using Connectionist Temporal Classification. Both methods have their pros and cons. It is necessary to analyse the use-case and use the algorithm best suited for that case.
+
+## References
+
+- [CTC Paper](https://www.cs.toronto.edu/~graves/icml_2006.pdf)
+- [An awesome blog](https://towardsdatascience.com/beam-search-decoding-in-ctc-trained-neural-networks-5a889a3d85a7)
+- [An intuitive Explanation of CTC](https://sid2697.github.io/Blog_Sid/algorithm/2019/10/19/CTC-Loss.html)
+- [More technical explanation of CTC](https://distill.pub/2017/ctc/)
