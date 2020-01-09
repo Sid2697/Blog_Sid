@@ -52,7 +52,7 @@ Fig. 1 shows the set ![c7](http://latex.codecogs.com/svg.latex?\{x\in\rm I\!R^2:
 {: style="text-align:center"}
 *Fig. 2 Plot for all the four constraints. The line in red show the edges of the polygon and the black dots show the vertices of the polygon formed by overlapping sections from all the four constraints*
 
-Once we have the convex polygon than the question to answer is which part of this polygon maximizes the value of ![Base Equation](http://latex.codecogs.com/svg.latex?3x_1+2x_2)? For this let us consider the equation ![Base Equation](http://latex.codecogs.com/svg.latex?3x_1+2x_2=K). At ![Cond 1](http://latex.codecogs.com/svg.latex?K=0) we get a line passing through the origin as shown in Fig. 3 in black. As we keep on increasing ![K](http://latex.codecogs.com/svg.latex?K) we have many points that line on the line and in the solution space (shown by the section of line in green in Fig. 3), all these points are **feasible solutions** as they satisfy all the constraints but are not the **optimal solution** (as they don't attend the max value). The value of ![K](http://latex.codecogs.com/svg.latex?K) for which we have only one feasible solution is the line which has the optimal value for this problem and hence the solution (shown in blue in Fig. 3). Now if we keep on increasing ![K](http://latex.codecogs.com/svg.latex?K) there will be no value for which all the constraints are satisfied (shown in red in Fig. 3), so, there is only one unique solution in this case. This shows that, a linear program may have a single optimal solution, or infinitely many optimal solutions, or none at all. 
+Once we have the convex polygon than the question to answer is which part of this polygon maximizes the value of ![Base Equation](http://latex.codecogs.com/svg.latex?3x_1+2x_2)? For this let us consider the equation ![Base Equation](http://latex.codecogs.com/svg.latex?3x_1+2x_2=K). At ![Cond 1](http://latex.codecogs.com/svg.latex?K=0) we get a line passing through the origin as shown in Fig. 3 in black. As we keep on increasing ![K](http://latex.codecogs.com/svg.latex?K) we have many points that line on the line and in the solution space (shown by the section of line in green in Fig. 3), all these points are **feasible solutions** as they satisfy all the constraints but are not the **optimal solution** (as they don't attend the max value). The value of ![K](http://latex.codecogs.com/svg.latex?K) for which we have only one feasible solution is the line which has the optimal value for this problem and hence the solution (shown in blue in Fig. 3). Now if we keep on increasing ![K](http://latex.codecogs.com/svg.latex?K) there will be no value for which all the constraints are satisfied (shown in red in Fig. 3), so, there is only one unique solution in this case. This shows that a linear program may have a single optimal solution, or infinitely many optimal solutions, or none at all. 
 
 ![Plot 3](../../../../assets/images/Blog_3_fig_3.pdf)
 
@@ -80,9 +80,9 @@ The graph in this case is
 {: style="text-align:center"}
 *Fig. 4 Plot when inequalities in all the four constraints is reversed*
 
-As it can be seen in Fig. 4, there is no region in the graphs where the half-planes formed by all the four constratints overlap. So, this is a linear program which has no feasible solution, and hence no optimal solution. Such a program is called **infeasible**. 
+As can be seen in Fig. 4, there is no region in the graphs where the half-planes formed by all the four constraints overlap. So, this is a linear program which has no feasible solution, and hence no optimal solution. Such a program is called **infeasible**. 
 
-There can be a case where there are feasible solutions but no optimal solution. In our original example, if we remove the first constraint and reverse the inquality of the second constraint. We have the updated constraints as 
+There can be a case where there are feasible solutions but no optimal solution. In our original example, if we remove the first constraint and reverse the inequality of the second constraint. We have the updated constraints as 
 
 {: style="text-align:center"}
 ![c4](http://latex.codecogs.com/svg.latex?7x_1+8x_2\geq28)
@@ -99,11 +99,11 @@ The graph in this case is
 ![Plot 5](../../../../assets/images/Blog_3_fig_5.pdf)
 *Fig. 5 Plot showing a case when the linear program is unbounded. Arrows point in the direction of all the feasible solutions*
 
-As it can be seen in Fig. 5, the region where the half-planes formed by all the three constraints overlaps starts from the bold black lines in Fig. 5 and extends upto infinity in the direction pointed by the arrows in Fig. 5. In this case, the objective function can attain arbitiraly large numbers, such a linear program is called to be **unbounded**. In summary, we have seen that a linear program can have one or infinitely many optimal solutions, but it can also be infeasible and unbounded.
+As can be seen in Fig. 5, the region where the half-planes formed by all the three constraints overlaps starts from the bold black lines in Fig. 5 and extends up to infinity in the direction pointed by the arrows in Fig. 5. In this case, the objective function can attain arbitrarily large numbers, such a linear program is called to be **unbounded**. In summary, we have seen that a linear program can have one or infinitely many optimal solutions, but it can also be infeasible and unbounded.
 
 ## Conclusion
 
-The example we chose to solve in this post consisted of only 2 variables, this made it easy to solve the linear program graphically. However, it will be difficult to even make a picture of a linear program with four variables. Linear program in practice often have several thousand variables, rather than two or four. This illustration was useful for understanding the procedures and notions of linear programming, but using this method for solving linear program is not feasible. There are various methods for solving them which we will discuss in future posts.
+The example we chose to solve in this post consisted of only two variables, this made it easy to solve the linear program graphically. However, it will be difficult to even construct a picture of a linear program with four variables. Linear program in practice often has several thousand variables, rather than two or four. This illustration was useful for understanding the procedures and notions of linear programming, but using this method for solving a linear program is not feasible. There are various methods for solving them which we will discuss in future posts.
 
 ### References
 
