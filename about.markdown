@@ -4,9 +4,10 @@ title: About
 permalink: /about/
 ---
 
-I am a Research Fellow at [CVIT Lab, IIIT Hyderabad](https://cvit.iiit.ac.in). I am working under [Dr C.V. Jawahar](https://faculty.iiit.ac.in/~jawahar/) on creating an OCR (Optical Character Reader) for Indian languages (Hindi, Tamil, and Telugu). I also work as Dr Jawahar's Teaching Assistant (TA) for the course 'Statistical Methods for Artificial Intelligence'. I am broadly interested in 2D and 3D Computer Vision, Deep Learning and related problems.
+I am an MS by Research candidate at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>. I'm guided by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and co-guided by <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a>.
+My research interest lies in Computer Vision, Pattern Recognition, and Machine Learning. My graduate research focuses on devising learning-based methods for understanding and exploring various aspects of first-person (egocentric) vision. Earlier, I worked on the task of improving word recognition and retrieval in large document collection under the guidance of <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a>. Previously, I worked with <a href='https://people.iitgn.ac.in/~shanmuga/'>Prof. Shanmuganathan Raman</a> on 3D Computer Vision.
 
-This is a series of blog posts for gathering notes on interesting concepts read by me. These blog posts aim to provide readers with a solid idea on the topic they are reading. Topics range from various algorithms to research papers and stuff I care about.
+My ultimate goal is to contribute to the development of systems capable of understanding the world as we do. I'm an inquisitive person, and I'm always willing to learn about fields including, but not limited to, science, technology, astrophysics, and physics.
 
 To know more about me and my work visit: [Personal Webpage](https://sid2697.github.io)
 
