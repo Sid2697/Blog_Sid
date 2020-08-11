@@ -2,7 +2,7 @@
 layout: post
 title: Going Deeper into First-Person Activity Recognition
 date: 2020-8-11 0:00:00 +0530
-categories: Paper Summary
+categories: Paper_summary
 google_analytics: UA-145393252-1
 comments: true
 ---
@@ -12,6 +12,7 @@ This paper aims at improving action recognition accuracy in the egocentric video
 ### Methodology (Egocentric Activity Deep Network)
 For a given video sequence, the task here is to predict object, action, and activity labels. For this task a two-stream CNN is used. The two-streams are divided as: (a) ObjectNet and (b) ActionNet.
 
+{: style="text-align:center"}
 ![Network Architecture](../../../../assets/images/PS_Kitani_2016.png)
 <br>[Source](http://www.cs.cmu.edu/~kkitani/pdf/MFK-CVPR2016.pdf)
 
