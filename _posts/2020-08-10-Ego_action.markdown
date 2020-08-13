@@ -7,7 +7,7 @@ google_analytics: UA-145393252-1
 comments: true
 ---
 
-This paper aims at improving action recognition accuracy in the egocentric videos using a two-stream Convolutional Neural Network (CNN) architecture. Here, one stream learns the appearance information, whereas the other stream learns the motion information. The two-stream CNN proposed is able to capture the object attributes and hand-object configurations.
+This paper aims at improving action recognition accuracy in the egocentric videos by using a two-stream Convolutional Neural Network (CNN) architecture. Here, one stream learns the appearance information, whereas the other stream learns the motion information. The two-stream CNN proposed is able to capture the object attributes and hand-object configurations.
 
 ### Methodology (Egocentric Activity Deep Network)
 For a given video sequence, the task here is to predict object, action, and activity labels. For this task a two-stream CNN is used. The two-streams are divided as: (a) ObjectNet and (b) ActionNet.
@@ -35,7 +35,7 @@ For this purpose, the authors propose to concatenate the second last fully-conne
 The final network has three losses: action, object, and activity loss.
 For calculating the final loss, a weighted sum of the three loss is calculated.
 
-#### Experiments and Conclusions
+### Experiments and Conclusions
 The authors evaluate the proposed methods on: GTEA, GTEAGaze, and GTEAGazePlus.
 They conclude that:
 - Hands are important for object recognition;
@@ -47,5 +47,5 @@ They conclude that:
 
 
 ### References
-1. Going Deeper into First-Person Activity Recognition. [Paper](http://www.cs.cmu.edu/~kkitani/pdf/MFK-CVPR2016.pdf)
-2. GTEA datasets. [Link](http://cbs.ic.gatech.edu/fpv/)
+1. Going Deeper into First-Person Activity Recognition. [[Paper]](http://www.cs.cmu.edu/~kkitani/pdf/MFK-CVPR2016.pdf)
+2. GTEA datasets. [[Link]](http://cbs.ic.gatech.edu/fpv/)
