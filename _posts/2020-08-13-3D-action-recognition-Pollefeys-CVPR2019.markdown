@@ -54,7 +54,7 @@ They call this as the *interaction RNN*.
 
 #### Training
 
-As it is diffcult to keep all the acitvations of the sequences of images in the memory, the authors find it effective to train the network in two stages.
+As it is difficult to keep all the activations of the sequences of images in the memory, the authors find it effective to train the network in two stages.
 First stage trains the network for predicting 3D hand and object poses, object and action categories.
 Second stage fixes the initial model and trains the recurrent network for propagating the information in the temporal domain.
 
