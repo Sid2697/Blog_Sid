@@ -7,7 +7,7 @@ google_analytics: UA-145393252-1
 comments: true
 ---
 
-This paper proposes a three-stream convolutional neural network architecture for the task of action recognition in first person videos. The three stream consists of the spatial, temporal, and *Ego* streams. The *Ego stream* is a two-stream architecture consisting of 2D and 3D CNN; it takes in hand mask, head motion, and saliency map for generating the class scores. The *Ego stream* when combined with the spatial and temporal streams, achieves a 10% gain in the action recognition accuracy.
+This paper proposes a three-stream convolutional neural network architecture for the task of action recognition in first-person videos. The three stream consists of the spatial, temporal, and *Ego* streams. The *Ego stream* is a two-stream architecture consisting of 2D and 3D CNN; it takes in hand mask, head motion, and saliency map for generating the class scores. The *Ego stream* when combined with the spatial and temporal streams, achieves a 10% gain in the action recognition accuracy.
 
 ### Ego ConvNet
 
