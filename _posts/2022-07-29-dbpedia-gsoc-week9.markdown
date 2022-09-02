@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'DBpedia GSoC 2022 (Week 8): Website-based demo for the framework + Mid-eval'
+title: 'DBpedia GSoC 2022 (Week 9): Website-based demo for the framework + Mid-eval'
 date: 2022-07-29 12:00:00 +0530
 categories: Open Source Contribution
 google_analytics: UA-145393252-1
