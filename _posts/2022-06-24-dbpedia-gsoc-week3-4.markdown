@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'DBpedia GSoC 2022 (Week 3-4): Project Summary and Begin Coding'
-date: 2022-06-24 12:00:00 +0530
+date: 2022-07-08 12:00:00 +0530
 categories: Open Source Contribution
 google_analytics: UA-145393252-1
 comments: true
