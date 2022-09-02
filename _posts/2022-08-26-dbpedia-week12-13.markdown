@@ -1,0 +1,14 @@
+---
+layout: post
+title: 'DBpedia GSoC 2022 (Week 12-13): Winding down the code, documentation, and API'
+date: 2022-08-12 12:00:00 +0530
+categories: Open Source Contribution
+google_analytics: UA-145393252-1
+comments: true
+---
+
+This article summarises my progess in GSoC over weeks twelve and thirteen of the GSoC coding period.
+
+Using Django, I created an API that anyone can use on their webpage for using the pipeline developed during the GSoC coding period. Furthermore, I udpated the documentation of the code written making it easy to follow and utilise.
+
+The following link contains all the code written during the GSoC period along with the API and documentation: [GitHub](https://github.com/dbpedia/image-search-gsoc-2022/).
