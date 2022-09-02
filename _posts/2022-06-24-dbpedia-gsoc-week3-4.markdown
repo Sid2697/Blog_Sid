@@ -32,7 +32,7 @@ Figure 1. A lot  of us might not know the name of this fish (yes, it is a fish!)
 
 #### How to use the images?
 
-![Meth](../../../../assets/images/gsoc_blog/GSoC_methodology_part1.png)
+![Meth](../../../../assets/images/gsoc_images/GSoC_methodology_part1.png)
 
 Figure 2. We want to generate a KG consisting of information from images from DBpedia aricticles. We represent a node as an image embedding and connect those nodes using the image's semantic similarity or existing DB-KG links.
 
